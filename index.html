@@ -1,37 +1,57 @@
 <html>
-	<head>
-		<style>
-			table {
-				border-collapse: collapse;
-				border: 1px solid #000;
-			}
-			td {
-				width: 50px;
-				height: 50px;
-				border: 1px solid #000;
-				text-align: center;
-				vertical-align: center;
-				font-family: monospace;
-				font-size: 10px;
-				position: relative;
-			}
-			td.pixel {
-				width: 4px;
-				height: 4px;
-				border: 0;
-			}
-			.pixelIndex {
-				font-size: 10px;
-				display: inline-block;
-				position: absolute;
-				top: 2px;
-				right: 2px;
-				color: #999;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="fireCanvas"></div>
-		<script src="doom-fire.js"></script>
-	</body>
+<head>
+	<style>
+		body {
+			background-color: #555;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		table {
+			border-collapse: collapse;
+			border: 1px solid #000;
+		}
+		td {
+			width: 60px;
+			height: 40px;
+			border: 1px solid #000;
+			text-align: center;
+			vertical-align: center;
+			font-family: monospace;
+			font-size: 10px;
+			position: relative;
+		}
+		td.pixel {
+			width: 4px;
+			height: 4px;
+			border: 0px;
+		}
+		.pixelIndex {
+			font-size: 10px;
+			display: inline-block;
+			position: absolute;
+			top: 2px;
+			right: 2px;
+			color: #999;
+		}
+		.margin {
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<center>
+	<div id="fireCanvas"></div>
+	<div class="margin">
+		<button onclick="decreaseFireBase()">-</button>
+		<button onclick="destroyFireBase()">Min Fire</button>
+		<button onclick="restoreFireBase()">Max Fire</button>
+		<button onclick="increaseFireBase()">+</button>
+	</div>
+	<div class="margin">
+		<button onclick="toggleDebugMode()">Toggle Debug Mode</button>
+	</div>
+</center>
+<script src="doom-fire.js"></script>
+</body>
 </html>
